@@ -42,16 +42,18 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Finance Simulator
-        </h1>
-        
-        <input className={styles.field} onChange={(e) => {changeInitial(e.target.value)}} type="number" placeholder="Amount to Invest"/>
-        <input className={styles.field} onChange={(e) => {changeYears(e.target.value)}} type="number" placeholder="Number of years"/>
-        <input className={styles.field} onChange={(e) => {changeInterest(e.target.value)}}  type="number" placeholder="Interest per year"/>
-        <input className={styles.field} type="number" readOnly={true} value={totalValue} placeholder="Total Income"/>
+        <div className={styles.investmentItem}>
+          <h1 className={styles.title}>
+            Finance Simulator
+          </h1>
+          
+          <input className={styles.field} onChange={(e) => {changeInitial(e.target.value)}} type="number" placeholder="Amount to Invest"/>
+          <input className={styles.field} onChange={(e) => {changeYears(e.target.value)}} type="number" placeholder="Number of years"/>
+          <input className={styles.field} onChange={(e) => {changeInterest(e.target.value)}}  type="number" placeholder="Interest per year"/>
+          <input className={styles.field} type="number" readOnly={true} value={totalValue} placeholder="Total Income"/>
 
-        <input className={styles.submitBtn} type="submit" value="Add Item"/>
+          <input className={styles.submitBtn} type="submit" value="Add Item"/>
+        </div>
       </main>
 
       <footer>
